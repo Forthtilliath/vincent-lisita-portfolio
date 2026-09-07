@@ -1,18 +1,19 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import Section from '$lib/components/shared/section.svelte';
 	import SectionTitle from '$lib/components/shared/section-title.svelte';
-	import type { Framework } from '$lib/components/layout/skills';
 	import ProjectCard from './project-card.svelte';
 	import projects from './projects';
-	import FrameworksGroup from './frameworks-group.svelte';
+	import type { ProjectCategory } from './projects';
+	import CategoryGroup from './category-group.svelte';
 	import Pagination from '$lib/components/shared/pagination.svelte';
 	import { t } from '$lib/translations';
-	import { filterProjectsByFrameworks } from './filter-projects';
+	import { filterProjects } from './filter-projects';
 
-	let filterFramework = $state<Framework | ''>('');
+	let filterCategory = $state<ProjectCategory | ''>('');
 
 	let filteredProjects = $derived(
-		filterProjectsByFrameworks(projects, filterFramework ? [filterFramework] : [])
+		filterProjects(projects, { category: filterCategory, includePlanned: dev })
 	);
 </script>
 
@@ -21,7 +22,7 @@
 
 	<div class="pb-4">
 		<p class="p-3 text-center text-slate-200">{$t('projects.radio-description')}</p>
-		<FrameworksGroup bind:value={filterFramework} />
+		<CategoryGroup bind:value={filterCategory} />
 	</div>
 
 	<Pagination data={filteredProjects} perPage={6} siblingCount={2}>

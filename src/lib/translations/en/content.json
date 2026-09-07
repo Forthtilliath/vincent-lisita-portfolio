@@ -38,12 +38,18 @@
 	"projects": {
 		"title": "My Projects",
 		"radio-description": "Click to filter projects",
+		"filterBy": "Filter by",
 		"display": "Open the project: {{name}}",
 		"imageAlt": "{{name}} project preview",
 		"readMore": "Read more",
 		"live": "View live",
 		"repo": "Show repository",
-		"close": "Close"
+		"close": "Close",
+		"status": {
+			"done": "Done",
+			"wip": "In progress",
+			"planned": "Planned"
+		}
 	},
 	"contact": {
 		"title": "Contact me",

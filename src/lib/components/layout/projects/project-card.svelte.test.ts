@@ -10,7 +10,9 @@ const baseProject: Project = {
 	image: '/img/demo.webp',
 	tags: ['React', 'Tailwind', 'Typescript'],
 	url: 'https://example.com',
-	repo: 'https://github.com/Forthtilliath/demo'
+	repo: 'https://github.com/Forthtilliath/demo',
+	status: 'done',
+	category: 'react'
 };
 
 function renderCard(overrides: Partial<Project> = {}) {
@@ -83,5 +85,18 @@ describe('project-card', () => {
 		renderCard({ url: undefined });
 
 		expect(screen.queryByRole('link', { name: /Ouvrir le projet/ })).not.toBeInTheDocument();
+	});
+
+	it('shows the status badge with the localized label', () => {
+		renderCard({ status: 'wip' });
+
+		expect(screen.getByText('En cours')).toBeInTheDocument();
+	});
+
+	it('does not render a repo button when the project has no repo', () => {
+		renderCard({ repo: undefined });
+
+		expect(screen.queryByRole('link', { name: 'Voir le repo' })).not.toBeInTheDocument();
+		expect(screen.getByRole('button', { name: 'Voir plus' })).toBeInTheDocument();
 	});
 });

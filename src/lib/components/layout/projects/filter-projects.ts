@@ -1,11 +1,21 @@
-import type { Framework } from '$lib/components/layout/skills';
-import type { Project } from './projects';
+import type { Project, ProjectCategory } from './projects';
 
-export function filterProjectsByFrameworks(
+/**
+ * Filtre la liste des projets par catégorie et par statut.
+ *
+ * - `category` vide → toutes les catégories.
+ * - `includePlanned` faux (défaut) → les projets « à faire » sont exclus
+ *   (visibles uniquement en dev, cf. `projects.svelte`).
+ */
+export function filterProjects(
 	projects: Project[],
-	frameworks: Framework[]
+	opts: { category?: ProjectCategory | ''; includePlanned?: boolean } = {}
 ): Project[] {
+	const { category = '', includePlanned = false } = opts;
+
 	return projects.filter(
-		(project) => frameworks.length === 0 || frameworks.some((f) => project.tags.includes(f))
+		(project) =>
+			(includePlanned || project.status !== 'planned') &&
+			(category === '' || project.category === category)
 	);
 }

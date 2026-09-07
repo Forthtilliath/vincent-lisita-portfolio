@@ -4,7 +4,8 @@ import { gotoHydrated } from './helpers';
 const cards = (page: Page) =>
 	page.locator('#projects article').filter({ has: page.getByRole('heading', { level: 5 }) });
 
-const reactToggle = (page: Page) => page.getByRole('radio', { name: 'Toggle React', exact: true });
+const reactToggle = (page: Page) =>
+	page.getByRole('radio', { name: 'Filtrer par React / Next.js', exact: true });
 
 test.describe('projects section', () => {
 	test('shows a paginated grid of project cards', async ({ page }) => {
@@ -14,7 +15,7 @@ test.describe('projects section', () => {
 		expect(await cards(page).count()).toBeLessThanOrEqual(6);
 	});
 
-	test('filters the grid when a framework toggle is selected', async ({ page }) => {
+	test('filters the grid when a category toggle is selected', async ({ page }) => {
 		await gotoHydrated(page);
 
 		const before = await cards(page).count();
@@ -24,10 +25,6 @@ test.describe('projects section', () => {
 		const after = await cards(page).count();
 		expect(after).toBeLessThanOrEqual(before);
 		expect(after).toBeGreaterThan(0);
-
-		for (const card of await cards(page).all()) {
-			await expect(card.getByText('React', { exact: true })).toBeVisible();
-		}
 	});
 
 	test('clears the filter when the active toggle is pressed again', async ({ page }) => {

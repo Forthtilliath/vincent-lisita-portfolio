@@ -37,12 +37,18 @@
 	"projects": {
 		"title": "Mes Projets",
 		"radio-description": "Cliquez pour filtrer les projets",
+		"filterBy": "Filtrer par",
 		"display": "Ouvrir le projet : {{name}}",
 		"imageAlt": "Aperçu du projet {{name}}",
 		"readMore": "Voir plus",
 		"live": "Voir en ligne",
 		"repo": "Voir le repo",
-		"close": "Fermer"
+		"close": "Fermer",
+		"status": {
+			"done": "Terminé",
+			"wip": "En cours",
+			"planned": "À faire"
+		}
 	},
 	"contact": {
 		"title": "Contactez-moi",
