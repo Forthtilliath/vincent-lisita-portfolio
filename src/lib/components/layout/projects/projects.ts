@@ -189,6 +189,17 @@ const projects: Project[] = [
 		category: 'react-native'
 	},
 	{
+		name: { fr: 'BoardGame Scoring', en: 'BoardGame Scoring' },
+		description: {
+			fr: 'Application mobile de calcul de scores pour jeux de société : règles paramétrables par jeu, historique de parties et classements.',
+			en: 'Mobile score-tracking app for board games: per-game configurable rules, game history and rankings.'
+		},
+		tags: ['React Native', 'Expo', 'Typescript'],
+		repo: ENDPOINT_GITHUB + '/boardgame-scoring',
+		status: 'wip',
+		category: 'react-native'
+	},
+	{
 		name: { fr: 'LOL Random Arena — Mobile', en: 'LOL Random Arena — Mobile' },
 		description: {
 			fr: "Portage mobile du générateur d'équipes et de combats aléatoires pour le mode Arène de League of Legends.",
@@ -233,17 +244,6 @@ const projects: Project[] = [
 		},
 		tags: ['Typescript', 'React', 'React Native', 'Turborepo', 'pnpm'],
 		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
-		status: 'wip',
-		category: 'libs'
-	},
-	{
-		name: { fr: 'BoardGame Scoring', en: 'BoardGame Scoring' },
-		description: {
-			fr: 'Bibliothèque de calcul de scores pour jeux de société : règles paramétrables par jeu, historique de parties et classements.',
-			en: 'Score-computation library for board games: per-game configurable rules, game history and rankings.'
-		},
-		tags: ['Typescript'],
-		repo: ENDPOINT_GITHUB + '/boardgame-scoring',
 		status: 'wip',
 		category: 'libs'
 	}
