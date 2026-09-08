@@ -29,7 +29,8 @@
 	},
 	"skills": {
 		"title": "My Skills",
-		"frameworks": "Frameworks & libraries",
+		"frontend": "Front-end",
+		"backend": "Back-end & data",
 		"css": "CSS",
 		"libraries": "Libraries",
 		"tools": "Tools",

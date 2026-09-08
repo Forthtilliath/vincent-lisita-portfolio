@@ -28,7 +28,8 @@
 	},
 	"skills": {
 		"title": "Mes Compétences",
-		"frameworks": "Frameworks & librairies",
+		"frontend": "Front-end",
+		"backend": "Back-end & données",
 		"css": "CSS",
 		"libraries": "Bibliothèques",
 		"tools": "Outils",

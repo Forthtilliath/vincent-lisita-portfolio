@@ -6,7 +6,7 @@
 	import skills from './skills';
 	import SkillBox from './tilt-box.svelte';
 	import { sortStringsByKey } from '$lib/methods/sort';
-	let { css, frameworks, languages, tools, libraries } = $derived(skills);
+	let { frontend, backend, css, libraries, languages, tools } = $derived(skills);
 </script>
 
 <Section className="flex items-center justify-center flex-col" id="skills">
@@ -15,13 +15,11 @@
 	</SectionTitle>
 
 	<div class="grid w-full gap-4 md:grid-cols-[repeat(auto-fit,minmax(26rem,1fr))]">
-		<SkillBox
-			title={$t('skills.frameworks')}
-			list={frameworks.toSorted(sortStringsByKey('name'))}
-		/>
+		<SkillBox title={$t('skills.frontend')} list={frontend.toSorted(sortStringsByKey('name'))} />
+		<SkillBox title={$t('skills.backend')} list={backend.toSorted(sortStringsByKey('name'))} />
 		<SkillBox title={$t('skills.css')} list={css.toSorted(sortStringsByKey('name'))} />
 		<SkillBox title={$t('skills.libraries')} list={libraries.toSorted(sortStringsByKey('name'))} />
-		<SkillBox title={$t('skills.tools')} list={tools.toSorted(sortStringsByKey('name'))} />
 		<SkillBox title={$t('skills.languages')} list={languages.toSorted(sortStringsByKey('name'))} />
+		<SkillBox title={$t('skills.tools')} list={tools.toSorted(sortStringsByKey('name'))} />
 	</div>
 </Section>
