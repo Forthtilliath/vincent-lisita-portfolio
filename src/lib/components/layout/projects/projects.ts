@@ -57,12 +57,12 @@ const projects: Project[] = [
 		category: 'react'
 	},
 	{
-		name: { fr: 'Ludothèque', en: 'Board Game Library' },
+		name: { fr: 'Don du sang', en: 'Blood Donation' },
 		description: {
-			fr: 'Application Next.js de gestion de ludothèque : collection synchronisée depuis BoardGameGeek, historique et statistiques de parties, recommandations « quoi jouer ce soir ». Dashboard web du bot soirées jeux, branché sur la même base.',
-			en: 'Next.js board game library app: collection synced from BoardGameGeek, play history and statistics, "what to play tonight" recommendations. Web dashboard for the board game night bot, wired to the same database.'
+			fr: "Site d'information et d'incitation au don du sang : comprendre à quoi sert un don et qui il aide, tester son éligibilité, trouver une collecte près de chez soi (données ouvertes EFS) et être rappelé dès qu'on peut redonner.",
+			en: 'Blood-donation information and outreach site: understand what a donation is used for and who it helps, check your eligibility, find a nearby blood drive (EFS open data) and get reminded as soon as you can donate again.'
 		},
-		tags: ['Next.js', 'Typescript', 'Tailwind', 'Drizzle', 'Recharts'],
+		tags: ['Next.js', 'Typescript', 'Tailwind', 'MapLibre', 'i18n'],
 		status: 'planned',
 		category: 'react'
 	},
@@ -273,8 +273,8 @@ const projects: Project[] = [
 	{
 		name: { fr: 'Bot soirées jeux', en: 'Board Game Night Bot' },
 		description: {
-			fr: 'Bot Discord pour groupes de joueurs : organisation des soirées (dates, présences, rappels), vote du jeu à sortir, collection du groupe synchronisée depuis BoardGameGeek, suivi des parties et classement Elo. Un dashboard web (Ludothèque) partage la même base.',
-			en: 'Discord bot for board game groups: game-night organization (dates, RSVP, reminders), voting on which game to play, group collection synced from BoardGameGeek, play tracking and Elo ranking. A companion web dashboard (Board Game Library) shares the same database.'
+			fr: 'Bot Discord pour groupes de joueurs : organisation des soirées (dates, présences, rappels), vote du jeu à sortir, collection du groupe importée depuis MyLudo, suivi des parties et classement Elo.',
+			en: 'Discord bot for board game groups: game-night organization (dates, RSVP, reminders), voting on which game to play, group collection imported from MyLudo, play tracking and Elo ranking.'
 		},
 		tags: ['Discord.js', 'Node.js', 'Typescript', 'Drizzle', 'SQLite'],
 		status: 'planned',
