@@ -12,9 +12,9 @@
 	const groups: { key: string; list: readonly Skill[] }[] = [
 		{ key: 'frontend', list: skills.frontend },
 		{ key: 'libraries', list: skills.libraries },
-		{ key: 'tools', list: skills.tools },
-		{ key: 'backend', list: skills.backend },
 		{ key: 'css', list: skills.css },
+		{ key: 'backend', list: skills.backend },
+		{ key: 'tools', list: skills.tools },
 		{ key: 'languages', list: skills.languages }
 	];
 </script>
