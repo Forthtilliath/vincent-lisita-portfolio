@@ -8,6 +8,8 @@ import SolidJS from '$lib/components/shared/icons/libraries/solid-js.svelte';
 import Svelte from '$lib/components/shared/icons/libraries/svelte.svelte';
 import NextJS from '$lib/components/shared/icons/libraries/next-js.svelte';
 import ReactNative from '$lib/components/shared/icons/libraries/react-native.svelte';
+import Angular from '$lib/components/shared/icons/libraries/angular.svelte';
+import SpringBoot from '$lib/components/shared/icons/libraries/spring-boot.svelte';
 
 import CSSModules from '$lib/components/shared/icons/libraries/css-modules.svelte';
 import SCSS from '$lib/components/shared/icons/libraries/sass.svelte';
@@ -17,13 +19,12 @@ import StyledComponents from '$lib/components/shared/icons/libraries/styled-comp
 import I18n from '$lib/components/shared/icons/libraries/i18n.svelte';
 import ChartJs from '$lib/components/shared/icons/libraries/chart-js.svelte';
 import Zod from '$lib/components/shared/icons/libraries/zod.svelte';
-import ReactQuery from '$lib/components/shared/icons/libraries/react-query.svelte';
 import Shadcn from '$lib/components/shared/icons/libraries/shadcn.svelte';
 import Zustand from '$lib/components/shared/icons/libraries/zustand.svelte';
 import Vitest from '$lib/components/shared/icons/libraries/vitest.svelte';
 
 import Typescript from '$lib/components/shared/icons/libraries/typescript.svelte';
-import GraphQl from '$lib/components/shared/icons/libraries/graph-ql.svelte';
+import Java from '$lib/components/shared/icons/libraries/java.svelte';
 import Sql from '$lib/components/shared/icons/libraries/sql.svelte';
 
 import AdonisJs from '$lib/components/shared/icons/libraries/adonis-js.svelte';
@@ -36,10 +37,14 @@ import Git from '$lib/components/shared/icons/libraries/git.svelte';
 import Github from '$lib/components/shared/icons/libraries/github.svelte';
 import VsCode from '$lib/components/shared/icons/libraries/vs-code.svelte';
 import Prisma from '$lib/components/shared/icons/libraries/prisma.svelte';
+import Drizzle from '$lib/components/shared/icons/libraries/drizzle.svelte';
 import MongoDB from '$lib/components/shared/icons/libraries/mongo-db.svelte';
 import Vite from '$lib/components/shared/icons/libraries/vite.svelte';
 import Pnpm from '$lib/components/shared/icons/libraries/pnpm.svelte';
+import Turborepo from '$lib/components/shared/icons/libraries/turborepo.svelte';
 import Supabase from '$lib/components/shared/icons/libraries/supabase.svelte';
+import NodeJs from '$lib/components/shared/icons/libraries/node-js.svelte';
+import Storybook from '$lib/components/shared/icons/libraries/storybook.svelte';
 
 export type Skill = {
 	name: string;
@@ -62,6 +67,10 @@ const skills = {
 			icon: NextJS
 		},
 		{
+			name: 'Angular',
+			icon: Angular
+		},
+		{
 			name: 'SolidJS',
 			icon: SolidJS
 		},
@@ -72,6 +81,10 @@ const skills = {
 		{
 			name: 'React Native',
 			icon: ReactNative
+		},
+		{
+			name: 'Spring Boot',
+			icon: SpringBoot
 		}
 	],
 	css: [
@@ -110,8 +123,8 @@ const skills = {
 			icon: ChartJs
 		},
 		{
-			name: 'React-query',
-			icon: ReactQuery
+			name: 'Storybook',
+			icon: Storybook
 		},
 		{
 			name: 'Zustand',
@@ -149,8 +162,8 @@ const skills = {
 			icon: Typescript
 		},
 		{
-			name: 'GraphQL',
-			icon: GraphQl
+			name: 'Java',
+			icon: Java
 		},
 		{
 			name: 'SQL',
@@ -171,8 +184,16 @@ const skills = {
 			icon: VsCode
 		},
 		{
+			name: 'Node.js',
+			icon: NodeJs
+		},
+		{
 			name: 'Prisma',
 			icon: Prisma
+		},
+		{
+			name: 'Drizzle',
+			icon: Drizzle
 		},
 		{
 			name: 'MongoDB',
@@ -181,6 +202,10 @@ const skills = {
 		{
 			name: 'Pnpm',
 			icon: Pnpm
+		},
+		{
+			name: 'Turborepo',
+			icon: Turborepo
 		},
 		{
 			name: 'Vite',

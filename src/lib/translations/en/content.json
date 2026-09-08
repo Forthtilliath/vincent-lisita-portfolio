@@ -29,9 +29,9 @@
 	},
 	"skills": {
 		"title": "My Skills",
-		"frameworks": "Frameworks",
+		"frameworks": "Frameworks & libraries",
 		"css": "CSS",
-		"libraries": "Librairies",
+		"libraries": "Libraries",
 		"tools": "Tools",
 		"languages": "Languages"
 	},
