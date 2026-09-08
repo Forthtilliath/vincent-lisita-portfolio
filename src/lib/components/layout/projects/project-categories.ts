@@ -31,5 +31,5 @@ export const projectCategories: ProjectCategoryDef[] = [
 		icons: [Angular, Java]
 	},
 	{ id: 'react-native', label: { fr: 'React Native', en: 'React Native' }, icons: [ReactNative] },
-	{ id: 'libs', label: { fr: 'Libs & extensions', en: 'Libs & extensions' }, icons: [Blocks] }
+	{ id: 'libs', label: { fr: 'Libs & exts', en: 'Libs & exts' }, icons: [Blocks] }
 ];
