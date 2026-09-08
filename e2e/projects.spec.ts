@@ -61,4 +61,14 @@ test.describe('projects section', () => {
 		await dialog.getByRole('button', { name: 'Fermer' }).click();
 		await expect(dialog).not.toBeVisible();
 	});
+
+	test('opens the detail dialog when the card surface is clicked', async ({ page }) => {
+		await gotoHydrated(page);
+
+		await cards(page)
+			.first()
+			.getByRole('button', { name: /^Ouvrir le projet/ })
+			.click();
+		await expect(page.getByRole('dialog')).toBeVisible();
+	});
 });
