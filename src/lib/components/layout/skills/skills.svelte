@@ -7,12 +7,13 @@
 	import SkillBox from './tilt-box.svelte';
 	import { sortStringsByKey } from '$lib/methods/sort';
 
-	// Ordered biggest-first so the masonry columns balance well.
+	// Front-end and back-end lead; the rest fills the remaining masonry space
+	// biggest-first so the columns stay balanced.
 	const groups: { key: string; list: readonly Skill[] }[] = [
-		{ key: 'tools', list: skills.tools },
 		{ key: 'frontend', list: skills.frontend },
-		{ key: 'libraries', list: skills.libraries },
 		{ key: 'backend', list: skills.backend },
+		{ key: 'tools', list: skills.tools },
+		{ key: 'libraries', list: skills.libraries },
 		{ key: 'css', list: skills.css },
 		{ key: 'languages', list: skills.languages }
 	];
