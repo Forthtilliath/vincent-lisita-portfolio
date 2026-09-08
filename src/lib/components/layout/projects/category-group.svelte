@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Shine from '$lib/components/shared/shine.svelte';
-	import SkillIcon from '$lib/components/shared/skill-icon.svelte';
 	import * as ToggleGroup from '$lib/components/ui/toggle-group';
 	import { t, locale, type Language } from '$lib/translations';
 	import { projectCategories } from './project-categories';
@@ -23,7 +22,14 @@
 			class="size-14 border p-0 hover:border-white sm:size-28"
 		>
 			<Shine>
-				<SkillIcon icon={category.icon} name={category.label[lang]} class="size-6 sm:size-12" />
+				<div class="flex flex-col items-center justify-center gap-1.5 p-1 sm:gap-3 sm:p-3">
+					<div class="flex items-center gap-0.5 sm:gap-1.5">
+						{#each category.icons as Icon, i (i)}
+							<Icon class="size-5 sm:size-9" />
+						{/each}
+					</div>
+					<p class="hidden text-center text-sm text-slate-200 sm:block">{category.label[lang]}</p>
+				</div>
 			</Shine>
 		</ToggleGroup.Item>
 	{/each}
