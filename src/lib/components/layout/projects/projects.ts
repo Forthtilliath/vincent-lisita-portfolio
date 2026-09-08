@@ -210,7 +210,7 @@ const projects: Project[] = [
 		category: 'react-native'
 	},
 	{
-		name: { fr: '@forthtilliath/react-native-kit', en: '@forthtilliath/react-native-kit' },
+		name: { fr: 'React Native Kit', en: 'React Native Kit' },
 		description: {
 			fr: 'Boîte à outils React Native — composants, hooks et helpers — utilisée en production par Glucodose. Publiée sur npm depuis un monorepo Turborepo (versioning Changesets, publication en CI).',
 			en: 'React Native toolkit — components, hooks and helpers — used in production by Glucodose. Published to npm from a Turborepo monorepo (Changesets versioning, CI publishing).'
@@ -259,7 +259,7 @@ const projects: Project[] = [
 		category: 'libs'
 	},
 	{
-		name: { fr: '@forthtilliath/forth-ui', en: '@forthtilliath/forth-ui' },
+		name: { fr: 'Forth-ui', en: 'Forth-ui' },
 		description: {
 			fr: 'Bibliothèque de composants React haut niveau construite sur shadcn/ui, documentée avec Storybook et publiée sur npm depuis un monorepo Turborepo (versioning Changesets, publication en CI).',
 			en: 'High-level React component library built on top of shadcn/ui, documented with Storybook and published to npm from a Turborepo monorepo (Changesets versioning, CI publishing).'
