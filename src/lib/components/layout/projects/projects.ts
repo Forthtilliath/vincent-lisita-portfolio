@@ -56,6 +56,16 @@ const projects: Project[] = [
 		status: 'done',
 		category: 'react'
 	},
+	{
+		name: { fr: 'Ludothèque', en: 'Board Game Library' },
+		description: {
+			fr: 'Application Next.js de gestion de ludothèque : collection synchronisée depuis BoardGameGeek, historique et statistiques de parties, recommandations « quoi jouer ce soir ». Dashboard web du bot soirées jeux, branché sur la même base.',
+			en: 'Next.js board game library app: collection synced from BoardGameGeek, play history and statistics, "what to play tonight" recommendations. Web dashboard for the board game night bot, wired to the same database.'
+		},
+		tags: ['Next.js', 'Typescript', 'Tailwind', 'Drizzle', 'Recharts'],
+		status: 'planned',
+		category: 'react'
+	},
 
 	// ---------------------------------------------------------------- Svelte / Solid
 	{
@@ -200,6 +210,18 @@ const projects: Project[] = [
 		category: 'react-native'
 	},
 	{
+		name: { fr: '@forthtilliath/react-native-kit', en: '@forthtilliath/react-native-kit' },
+		description: {
+			fr: 'Boîte à outils React Native — composants, hooks et helpers — utilisée en production par Glucodose. Publiée sur npm depuis un monorepo Turborepo (versioning Changesets, publication en CI).',
+			en: 'React Native toolkit — components, hooks and helpers — used in production by Glucodose. Published to npm from a Turborepo monorepo (Changesets versioning, CI publishing).'
+		},
+		tags: ['React Native', 'Expo', 'Typescript', 'Turborepo'],
+		url: 'https://www.npmjs.com/package/@forthtilliath/react-native-kit',
+		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
+		status: 'wip',
+		category: 'react-native'
+	},
+	{
 		name: { fr: 'LOL Random Arena — Mobile', en: 'LOL Random Arena — Mobile' },
 		description: {
 			fr: "Portage mobile du générateur d'équipes et de combats aléatoires pour le mode Arène de League of Legends.",
@@ -237,14 +259,25 @@ const projects: Project[] = [
 		category: 'libs'
 	},
 	{
-		name: { fr: '@forthtilliath', en: '@forthtilliath' },
+		name: { fr: '@forthtilliath/forth-ui', en: '@forthtilliath/forth-ui' },
 		description: {
-			fr: 'Monorepo de packages npm publiés : composants et hooks React, kit React Native, utilitaires TypeScript, outils Expo. Géré avec Turborepo, pnpm et Changesets.',
-			en: 'Monorepo of published npm packages: React components and hooks, a React Native kit, TypeScript utilities, Expo tooling. Managed with Turborepo, pnpm and Changesets.'
+			fr: 'Bibliothèque de composants React haut niveau construite sur shadcn/ui, documentée avec Storybook et publiée sur npm depuis un monorepo Turborepo (versioning Changesets, publication en CI).',
+			en: 'High-level React component library built on top of shadcn/ui, documented with Storybook and published to npm from a Turborepo monorepo (Changesets versioning, CI publishing).'
 		},
-		tags: ['Typescript', 'React', 'React Native', 'Turborepo', 'pnpm'],
+		tags: ['React', 'Typescript', 'Tailwind', 'Shadcn/ui', 'Storybook'],
+		url: 'https://www.npmjs.com/package/@forthtilliath/forth-ui',
 		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
 		status: 'wip',
+		category: 'libs'
+	},
+	{
+		name: { fr: 'Bot soirées jeux', en: 'Board Game Night Bot' },
+		description: {
+			fr: 'Bot Discord pour groupes de joueurs : organisation des soirées (dates, présences, rappels), vote du jeu à sortir, collection du groupe synchronisée depuis BoardGameGeek, suivi des parties et classement Elo. Un dashboard web (Ludothèque) partage la même base.',
+			en: 'Discord bot for board game groups: game-night organization (dates, RSVP, reminders), voting on which game to play, group collection synced from BoardGameGeek, play tracking and Elo ranking. A companion web dashboard (Board Game Library) shares the same database.'
+		},
+		tags: ['Discord.js', 'Node.js', 'Typescript', 'Drizzle', 'SQLite'],
+		status: 'planned',
 		category: 'libs'
 	}
 ];

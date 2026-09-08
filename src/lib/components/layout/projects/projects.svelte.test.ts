@@ -1,13 +1,21 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { render, screen, within } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
 import projectList from './projects';
 import { filterProjects } from './filter-projects';
 import Projects from './projects.svelte';
 
+// Force production behaviour for this suite (the shared setup mocks `dev: true`).
+// In production the section hides `planned` projects.
+vi.mock('$app/environment', () => ({
+	browser: true,
+	building: false,
+	dev: false,
+	version: 'test'
+}));
+
 const PER_PAGE = 6;
 
-// The section hides `planned` projects unless running in dev; the test env is not dev.
 const publicProjects = filterProjects(projectList);
 
 const visibleHeadings = () =>
@@ -63,7 +71,7 @@ describe('projects section', () => {
 		expect(visibleHeadings()).toContain(firstExpected);
 	});
 
-	it('does not render planned projects', () => {
+	it('does not render planned projects in production', () => {
 		render(Projects);
 
 		const planned = projectList.filter((p) => p.status === 'planned').map((p) => p.name.fr);
