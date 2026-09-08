@@ -65,11 +65,7 @@
 			size="none"
 			color="app-blue"
 			padding="sm"
-			aria-label={$t('projects.display', { name: name[lang] })}
-			class="bg-app-black rounded-b-none"
-			href={url}
-			target="_blank"
-			rel="noopener noreferrer"
+			class="bg-app-black relative rounded-b-none hover:bg-gray-100 dark:hover:bg-white/5"
 		>
 			<h5 class="line-clamp-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
 				{name[lang]}
@@ -85,9 +81,18 @@
 					<ProjectTag tag={`+${hiddenTagsCount}`} />
 				{/if}
 			</div>
+			<!-- Full-card click target: opens the detail dialog. Kept as an overlay
+			     button so the card surface never navigates away on its own; the
+			     live-site link now lives only inside that dialog ("Voir en ligne"). -->
+			<button
+				type="button"
+				class="focus-visible:ring-app-blue absolute inset-0 z-1 cursor-pointer rounded-t-lg focus-visible:ring-2 focus-visible:outline-none"
+				aria-label={$t('projects.display', { name: name[lang] })}
+				onclick={() => (dialogOpen = true)}
+			></button>
 		</Card>
-		<!-- Outside the card's own <a> on purpose: these are real buttons/dialog triggers, not
-		     navigation to the project's live url, and must never sit inside that anchor. -->
+		<!-- Sits below the card, outside its overlay button: the repo link is a real
+		     anchor and must stay clickable in its own right. -->
 		<div class="bg-app-black ring-app-blue flex gap-2 rounded-b-lg p-4 ring-1">
 			<Button
 				type="button"
