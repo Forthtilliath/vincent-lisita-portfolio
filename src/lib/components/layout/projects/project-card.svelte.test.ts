@@ -7,7 +7,7 @@ import type { Project } from './projects';
 const baseProject: Project = {
 	name: { fr: 'Mon Projet', en: 'My Project' },
 	description: { fr: 'Une description française.', en: 'An English description.' },
-	image: '/img/demo.webp',
+	images: ['/img/demo.webp'],
 	tags: ['React', 'Tailwind', 'Typescript'],
 	url: 'https://example.com',
 	repo: 'https://github.com/Forthtilliath/demo',
@@ -99,6 +99,28 @@ describe('project-card', () => {
 		const dialog = await screen.findByRole('dialog');
 		expect(within(dialog).getByRole('heading', { name: 'Mon Projet' })).toBeInTheDocument();
 		expect(within(dialog).getByRole('img')).toHaveAccessibleName('Mon Projet');
+		expect(
+			within(dialog).queryByRole('button', { name: 'Capture suivante' })
+		).not.toBeInTheDocument();
+	});
+
+	it('uses the first screenshot as the card cover', () => {
+		renderCard({ images: ['/img/cover.webp', '/img/second.webp'] });
+
+		expect(screen.getByRole('img', { name: 'Aperçu du projet Mon Projet' })).toHaveAttribute(
+			'src',
+			'/img/cover.webp'
+		);
+	});
+
+	it('does not render an image in the dialog when the project has no screenshot', async () => {
+		const user = userEvent.setup();
+		renderCard({ images: undefined });
+
+		await user.click(screen.getByRole('button', { name: 'Voir plus' }));
+
+		const dialog = await screen.findByRole('dialog');
+		expect(within(dialog).queryByRole('img')).not.toBeInTheDocument();
 	});
 
 	it('does not render a live link in the dialog when the project has no url', async () => {
