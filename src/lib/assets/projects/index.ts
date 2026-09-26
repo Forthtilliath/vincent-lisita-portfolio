@@ -17,14 +17,6 @@ import solidjsOriflamme from './solidjs-oriflamme.webp';
 import solidjsPlaygroundsOrganizer from './solidjs-playgrounds-organizer.webp';
 
 import angularForme from './angular-forme.webp';
-import angularFormeMarbre from './angular-forme-marbre.webp';
-import angularFormeAtelier from './angular-forme-atelier.webp';
-import angularFormeEpreuve from './angular-forme-epreuve.webp';
-import angularFormeJsonSchema from './angular-forme-json-schema.webp';
-import angularFormeValidation from './angular-forme-validation.webp';
-import angularFormeRecu from './angular-forme-recu.webp';
-import angularFormeRegistre from './angular-forme-registre.webp';
-import angularFormeMobile from './angular-forme-mobile.webp';
 
 import meeplog from './meeplog.webp';
 import devwind from './devwind.webp';
@@ -52,18 +44,12 @@ export {
 	solidjsPlaygroundsOrganizer,
 	//
 	angularForme,
-	angularFormeMarbre,
-	angularFormeAtelier,
-	angularFormeEpreuve,
-	angularFormeJsonSchema,
-	angularFormeValidation,
-	angularFormeRecu,
-	angularFormeRegistre,
-	angularFormeMobile,
 	//
 	meeplog,
 	devwind
 };
+
+export { gallery } from './gallery';
 
 // 1657x932
 // 500x281
