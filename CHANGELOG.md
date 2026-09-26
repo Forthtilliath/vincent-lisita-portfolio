@@ -6,6 +6,13 @@ Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Le projet est déployé en continu : les entrées sont datées par session de travail
 plutôt que par numéro de version.
 
+## 2026-09-26
+
+### Modifié
+
+- Projet **LoL Random Arena** (SvelteKit) : description et tags mis à jour après la refonte « Hextech » (v1.0.0), nouvelle couverture et galerie (formulaire, résultat duos, résultat trios, vue mobile).
+- Projet **LoL Random Arena — Mobile** (React Native) : passé de « planned » à « done », dépôt dédié `reactnative-lol-random-arena`, description, tags et galerie de captures.
+
 ## 2026-09-06
 
 ### Ajouté
