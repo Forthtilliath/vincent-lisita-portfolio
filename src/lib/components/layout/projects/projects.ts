@@ -239,7 +239,7 @@ const projects: Project[] = [
 		},
 		images: projectImages.gallery('lol-random-arena-mobile'),
 		tags: ['React Native', 'Expo', 'Typescript', 'Zustand', 'Zod', 'Jest'],
-		repo: ENDPOINT_GITHUB + '/reactnative-lol-random-arena',
+		repo: ENDPOINT_GITHUB + '/lol-random-arena-mobile',
 		status: 'done',
 		category: 'react-native'
 	},

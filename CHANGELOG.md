@@ -11,6 +11,7 @@ plutôt que par numéro de version.
 ### Modifié
 
 - Projet **Bon Sang** (Next.js, ex-« Don du sang ») : renommé d'après sa marque, v1.0.0 terminée. Description et tags mis à jour après la refonte « Plasma & Globule », galerie refaite (accueil, parcours d'une poche, témoignages, quiz, carte des collectes, suivi, vues mobiles).
+- Projet **LoL Random Arena** (React Native, version mobile) : lien vers le dépôt renommé `lol-random-arena-mobile` (ex-`reactnative-lol-random-arena`).
 
 ## 2026-09-26
 
