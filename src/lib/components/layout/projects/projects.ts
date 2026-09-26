@@ -63,8 +63,11 @@ const projects: Project[] = [
 			fr: "Site d'information et d'incitation au don du sang : comprendre à quoi sert un don et qui il aide, tester son éligibilité, trouver une collecte près de chez soi (données ouvertes EFS) et être rappelé dès qu'on peut redonner.",
 			en: 'Blood-donation information and outreach site: understand what a donation is used for and who it helps, check your eligibility, find a nearby blood drive (EFS open data) and get reminded as soon as you can donate again.'
 		},
+		images: projectImages.gallery('bon-sang'),
 		tags: ['Next.js', 'Typescript', 'Tailwind', 'MapLibre', 'i18n'],
-		status: 'planned',
+		url: 'https://bon-sang.vercel.app/',
+		repo: ENDPOINT_GITHUB + '/bon-sang',
+		status: 'done',
 		category: 'react'
 	},
 
