@@ -71,7 +71,9 @@
 	</div>
 
 	{#if total > 1}
-		<div class="flex gap-2 overflow-x-auto pb-1">
+		<div
+			class="flex [scrollbar-width:thin] [scrollbar-color:var(--color-app-blue)_transparent] gap-2 overflow-x-auto p-0.5 pb-2"
+		>
 			{#each images as src, index (src)}
 				<button
 					type="button"
