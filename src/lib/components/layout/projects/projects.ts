@@ -58,13 +58,13 @@ const projects: Project[] = [
 		category: 'react'
 	},
 	{
-		name: { fr: 'Don du sang', en: 'Blood Donation' },
+		name: { fr: 'Bon Sang', en: 'Bon Sang' },
 		description: {
-			fr: "Site d'information et d'incitation au don du sang : comprendre à quoi sert un don et qui il aide, tester son éligibilité, trouver une collecte près de chez soi (données ouvertes EFS) et être rappelé dès qu'on peut redonner.",
-			en: 'Blood-donation information and outreach site: understand what a donation is used for and who it helps, check your eligibility, find a nearby blood drive (EFS open data) and get reminded as soon as you can donate again.'
+			fr: "Site d'information et d'incitation au don du sang : comprendre à quoi sert un don et qui il aide, tester son éligibilité avec un quiz d'après les critères EFS, trouver une collecte sur une carte clusterisée (API Carto de l'EFS) et suivre ses dons avec rappel de ré-éligibilité, badges et export agenda — 100 % local, sans compte. Thème « Plasma & Globule » sur mesure, bilingue FR/EN, clair/sombre, accessible (WCAG AA vérifié par axe).",
+			en: 'Blood-donation information and outreach site: understand what a donation is used for and who it helps, check your eligibility with a quiz based on EFS criteria, find a blood drive on a clustered map (EFS Carto API) and log your donations with a re-eligibility reminder, badges and calendar export — 100% local, no account. Custom « Plasma & Globule » theme, bilingual FR/EN, light/dark, accessible (WCAG AA checked with axe).'
 		},
 		images: projectImages.gallery('bon-sang'),
-		tags: ['Next.js', 'Typescript', 'Tailwind', 'MapLibre', 'i18n'],
+		tags: ['Next.js', 'Typescript', 'Tailwind', 'MapLibre', 'next-intl', 'Vitest', 'Playwright'],
 		url: 'https://bon-sang.vercel.app/',
 		repo: ENDPOINT_GITHUB + '/bon-sang',
 		status: 'done',
