@@ -134,6 +134,18 @@ const projects: Project[] = [
 
 	// ---------------------------------------------------------------- Angular / Java
 	{
+		name: { fr: 'Forme', en: 'Forme' },
+		description: {
+			fr: "Constructeur de formulaires en glisser-déposer à l'identité d'atelier typographique : champs configurables, validation miroir côté Angular et côté Java, aperçu en direct, page publique, registre des réponses et export JSON Schema. Se lance en une commande avec Docker.",
+			en: 'Drag-and-drop form builder with a letterpress-workshop identity: configurable fields, mirrored validation in Angular and Java, live preview, public page, response ledger and JSON Schema export. Runs with a single Docker command.'
+		},
+		image: projectImages.angularForme,
+		tags: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Typescript'],
+		repo: ENDPOINT_GITHUB + '/forme',
+		status: 'done',
+		category: 'angular-java'
+	},
+	{
 		name: { fr: 'BoardGameShop', en: 'BoardGameShop' },
 		description: {
 			fr: "Boutique en ligne de jeux de société développée en Angular et Java/Spring Boot : catalogue, panier, commandes et back-office d'administration.",
@@ -161,16 +173,6 @@ const projects: Project[] = [
 			en: 'Instant messaging with rooms, online presence and notifications over WebSocket. Angular front, Java/Spring back.'
 		},
 		tags: ['Angular', 'Java', 'Spring Boot', 'WebSocket'],
-		status: 'planned',
-		category: 'angular-java'
-	},
-	{
-		name: { fr: 'Créateur de formulaires', en: 'Form Builder' },
-		description: {
-			fr: 'Constructeur de formulaires en glisser-déposer : champs configurables, validation, aperçu en direct et export du schéma.',
-			en: 'Drag-and-drop form builder: configurable fields, validation, live preview and schema export.'
-		},
-		tags: ['Angular', 'Java', 'Spring Boot'],
 		status: 'planned',
 		category: 'angular-java'
 	},
