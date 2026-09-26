@@ -7,7 +7,8 @@ export type ProjectCategory = 'react' | 'svelte-solid' | 'angular-java' | 'react
 export type Project = {
 	name: Record<Language, string>;
 	description: Record<Language, string>;
-	image?: string;
+	/** Screenshots shown in the detail dialog; the first one is the card cover. */
+	images?: string[];
 	tags: string[];
 	url?: string | undefined;
 	repo?: string | undefined;
@@ -25,7 +26,7 @@ const projects: Project[] = [
 			fr: "Site d'une chorale fictive à Angers mêlant chant choral et jeux de société : vitrine publique (accueil éditable par blocs, concerts, galerie photos/vidéos), espace choristes sécurisé en 2FA (trombinoscope, carte, répertoire, sondages, tâches de bureau) et back-office d'administration complet. Développé avec Next.js et Supabase (auth, Postgres, RLS, storage).",
 			en: 'Website for a fictional choir in Angers blending choral singing and board games: public showcase (block-editable homepage, concerts, photo/video gallery), 2FA-secured member area (member directory, map, song library, polls, committee tasks) and full admin back-office. Built with Next.js and Supabase (auth, Postgres, RLS, storage).'
 		},
-		image: projectImages.nextjsChoeurDeRole,
+		images: [projectImages.nextjsChoeurDeRole],
 		tags: ['Next.js', 'Tailwind', 'Typescript', 'Supabase', 'Zod', 'Vitest'],
 		repo: ENDPOINT_GITHUB + '/choeur-de-role',
 		status: 'done',
@@ -37,7 +38,7 @@ const projects: Project[] = [
 			fr: 'Encyclopédie interactive de League of Legends : champions, objets et sorts alimentés en direct par Data Dragon et CommunityDragon, interface multilingue.',
 			en: 'Interactive League of Legends encyclopedia: champions, items and spells fed live from Data Dragon and CommunityDragon, with a multilingual interface.'
 		},
-		image: projectImages.nextjsRiotApi,
+		images: [projectImages.nextjsRiotApi],
 		tags: ['Next.js', 'Typescript', 'next-intl', 'Tailwind'],
 		repo: ENDPOINT_GITHUB + '/riftpedia',
 		status: 'done',
@@ -49,7 +50,7 @@ const projects: Project[] = [
 			fr: 'Hook headless pour Preact qui génère un sommaire avec scrollspy, publié sur npm sous @forthtilliath/preact-toc.',
 			en: 'Headless Preact hook that generates a scrollspy table of contents, published on npm as @forthtilliath/preact-toc.'
 		},
-		image: projectImages.preactPageNavigation,
+		images: [projectImages.preactPageNavigation],
 		tags: ['Preact', 'Tailwind', 'Typescript'],
 		url: 'https://preact-page-navigation.vercel.app/',
 		repo: ENDPOINT_GITHUB + '/preact-toc',
@@ -74,7 +75,7 @@ const projects: Project[] = [
 			fr: 'Portfolio présentant mes projets et mes compétences',
 			en: 'Portfolio of my works and projects'
 		},
-		image: projectImages.sveltekitPortfolio,
+		images: [projectImages.sveltekitPortfolio],
 		tags: ['Sveltekit', 'Tailwind', 'Typescript', 'i18n', 'Shadcn/ui', 'Zod'],
 		url: 'https://vincent-lisita.vercel.app/',
 		repo: ENDPOINT_GITHUB + '/vincent-lisita-portfolio',
@@ -87,7 +88,7 @@ const projects: Project[] = [
 			fr: 'Application qui aide les joueurs à générer des equipes et des combats aleatoires.',
 			en: 'App to help players to generate teams & champions inside arena mode.'
 		},
-		image: projectImages.sveltekitLolArena,
+		images: [projectImages.sveltekitLolArena],
 		tags: ['Sveltekit', 'Typescript', 'Shadcn/ui', 'Tailwind', 'Zod'],
 		url: 'https://lol-random-arena.vercel.app/',
 		repo: ENDPOINT_GITHUB + '/lol-random-arena',
@@ -100,7 +101,7 @@ const projects: Project[] = [
 			fr: 'Spotube est une application de streaming musical qui te donne accès à quelques titres.',
 			en: 'Spotube is a music streaming app that gives you access to a few tracks.'
 		},
-		image: projectImages.solidjsSpotube,
+		images: [projectImages.solidjsSpotube],
 		tags: ['SolidJS', 'CSS Modules', 'SCSS', 'Typescript'],
 		url: 'https://forth-spotube.netlify.app/',
 		repo: ENDPOINT_GITHUB + '/spotube',
@@ -113,7 +114,7 @@ const projects: Project[] = [
 			fr: 'La Rotisserie Sandwichs Maison offre une expérience culinaire authentique avec ses viandes grillées artisanales et ses sandwiches gourmands, disponibles sur commande et en livraison à domicile via Les Frères Toques.',
 			en: 'The Rotisserie Sandwich House provides an authentic culinary experience with its artisanal grilled meats and gourmet sandwiches, available on order and home delivery through The Brothers Forks.'
 		},
-		image: projectImages.solidjsOriflamme,
+		images: [projectImages.solidjsOriflamme],
 		tags: ['SolidJS', 'Tailwind', 'Typescript'],
 		url: 'https://forth-oriflamme.netlify.app/',
 		repo: ENDPOINT_GITHUB + '/oriflamme',
@@ -139,7 +140,7 @@ const projects: Project[] = [
 			fr: "Constructeur de formulaires en glisser-déposer à l'identité d'atelier typographique : champs configurables, validation miroir côté Angular et côté Java, aperçu en direct, page publique, registre des réponses et export JSON Schema. Se lance en une commande avec Docker.",
 			en: 'Drag-and-drop form builder with a letterpress-workshop identity: configurable fields, mirrored validation in Angular and Java, live preview, public page, response ledger and JSON Schema export. Runs with a single Docker command.'
 		},
-		image: projectImages.angularForme,
+		images: [projectImages.angularForme],
 		tags: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/forme',
 		status: 'done',
@@ -242,7 +243,7 @@ const projects: Project[] = [
 			fr: "Extension Chrome pour éditer visuellement les classes Tailwind CSS en direct sur n'importe quel site : picker visuel, panneau de classes par catégorie, synthèse CSS live, contrôle de contraste WCAG. Deux variantes : Tailwind v4 (DevWind) et v3 (devwind-tw3).",
 			en: 'Chrome extension to visually edit Tailwind CSS classes live on any site: visual picker, categorized class panel, live CSS synthesis, WCAG contrast checking. Two variants: Tailwind v4 (DevWind) and v3 (devwind-tw3).'
 		},
-		image: projectImages.devwind,
+		images: [projectImages.devwind],
 		tags: ['React', 'Tailwind', 'Typescript', 'Zustand', 'Vite', 'Chrome Extension'],
 		repo: ENDPOINT_GITHUB + '/devwind',
 		status: 'wip',
@@ -254,7 +255,7 @@ const projects: Project[] = [
 			fr: 'Blog perso sur les jeux de société (chroniques, retours de partie), développé en full-stack avec AdonisJS : auth, connexion GitHub, articles en markdown.',
 			en: 'Personal blog about board games (reviews, session reports), built full-stack with AdonisJS: auth, GitHub login, markdown articles.'
 		},
-		image: projectImages.meeplog,
+		images: [projectImages.meeplog],
 		tags: ['AdonisJS', 'Bootstrap', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/meeplog',
 		status: 'done',

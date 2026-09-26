@@ -5,10 +5,11 @@
 	import type { Project } from './projects';
 	import Shine from '$lib/components/shared/shine.svelte';
 	import ProjectTag from './project-tag.svelte';
+	import ProjectGallery from './project-gallery.svelte';
 	import { t, locale, type Language } from '$lib/translations';
 
 	interface Props {
-		image?: Project['image'];
+		images?: Project['images'];
 		name: Project['name'];
 		description: Project['description'];
 		repo?: Project['repo'];
@@ -18,7 +19,7 @@
 	}
 
 	let {
-		image = undefined,
+		images = [],
 		name,
 		description,
 		repo = undefined,
@@ -60,7 +61,7 @@
 			{$t(`projects.status.${status}`)}
 		</span>
 		<Card
-			img={image}
+			img={images[0]}
 			imgAlt={$t('projects.imageAlt', { name: name[lang] })}
 			size="none"
 			color="app-blue"
@@ -113,15 +114,8 @@
 
 <Dialog.Root bind:open={dialogOpen}>
 	<Dialog.Content class="sm:max-w-lg">
-		{#if image}
-			<img
-				src={image}
-				alt={name[lang]}
-				width="1280"
-				height="720"
-				loading="lazy"
-				class="aspect-video w-full rounded-lg object-cover"
-			/>
+		{#if images.length > 0}
+			<ProjectGallery {images} name={name[lang]} />
 		{/if}
 		<Dialog.Header>
 			<Dialog.Title>{name[lang]}</Dialog.Title>
