@@ -86,13 +86,13 @@ const projects: Project[] = [
 		category: 'svelte-solid'
 	},
 	{
-		name: { fr: 'LOL Random Arena', en: 'LOL Random Arena' },
+		name: { fr: 'LoL Random Arena', en: 'LoL Random Arena' },
 		description: {
-			fr: 'Application qui aide les joueurs à générer des equipes et des combats aleatoires.',
-			en: 'App to help players to generate teams & champions inside arena mode.'
+			fr: "Générateur d'équipes et de champions aléatoires pour le mode Arena de League of Legends : duos ou trios, un champion par joueur sans doublon, bannissement automatique d'après les stats op.gg et lien de partage du tirage. Thème « Hextech » inspiré du client LoL, champions synchronisés depuis Data Dragon.",
+			en: "Random team & champion generator for League of Legends' Arena mode: duos or trios, one unique champion per player, automatic bans based on op.gg stats and shareable draw links. League client-inspired « Hextech » theme, champions synced from Data Dragon."
 		},
 		images: [projectImages.sveltekitLolArena, ...projectImages.gallery('lol-random-arena')],
-		tags: ['Sveltekit', 'Typescript', 'Shadcn/ui', 'Tailwind', 'Zod'],
+		tags: ['Sveltekit', 'Svelte 5', 'Typescript', 'Tailwind', 'Shadcn/ui', 'Zod', 'Vitest'],
 		url: 'https://lol-random-arena.vercel.app/',
 		repo: ENDPOINT_GITHUB + '/lol-random-arena',
 		status: 'done',
@@ -232,14 +232,15 @@ const projects: Project[] = [
 		category: 'react-native'
 	},
 	{
-		name: { fr: 'LOL Random Arena — Mobile', en: 'LOL Random Arena — Mobile' },
+		name: { fr: 'LoL Random Arena — Mobile', en: 'LoL Random Arena — Mobile' },
 		description: {
-			fr: "Portage mobile du générateur d'équipes et de combats aléatoires pour le mode Arène de League of Legends.",
-			en: "Mobile port of the random team & fight generator for League of Legends' Arena mode."
+			fr: "Portage mobile du générateur d'équipes et de champions pour le mode Arena de League of Legends, avec le même thème « Hextech » que le site : tirage hors ligne (portraits embarqués), bannissement automatique via op.gg, pseudos retenus et groupes sauvegardés, partage du résultat.",
+			en: "Mobile port of the team & champion generator for League of Legends' Arena mode, sharing the website's « Hextech » theme: offline draws (bundled portraits), automatic bans via op.gg, remembered players and saved groups, result sharing."
 		},
-		tags: ['React Native', 'Expo', 'Typescript'],
-		repo: ENDPOINT_GITHUB + '/lol-random-arena',
-		status: 'planned',
+		images: projectImages.gallery('lol-random-arena-mobile'),
+		tags: ['React Native', 'Expo', 'Typescript', 'Zustand', 'Zod', 'Jest'],
+		repo: ENDPOINT_GITHUB + '/reactnative-lol-random-arena',
+		status: 'done',
 		category: 'react-native'
 	},
 
