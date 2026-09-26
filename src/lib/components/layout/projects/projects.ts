@@ -232,7 +232,7 @@ const projects: Project[] = [
 		category: 'react-native'
 	},
 	{
-		name: { fr: 'LoL Random Arena — Mobile', en: 'LoL Random Arena — Mobile' },
+		name: { fr: 'LoL Random Arena', en: 'LoL Random Arena' },
 		description: {
 			fr: "Portage mobile du générateur d'équipes et de champions pour le mode Arena de League of Legends, avec le même thème « Hextech » que le site : tirage hors ligne (portraits embarqués), bannissement automatique via op.gg, pseudos retenus et groupes sauvegardés, partage du résultat.",
 			en: "Mobile port of the team & champion generator for League of Legends' Arena mode, sharing the website's « Hextech » theme: offline draws (bundled portraits), automatic bans via op.gg, remembered players and saved groups, result sharing."

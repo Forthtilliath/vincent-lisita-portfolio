@@ -11,7 +11,7 @@ plutôt que par numéro de version.
 ### Modifié
 
 - Projet **LoL Random Arena** (SvelteKit) : description et tags mis à jour après la refonte « Hextech » (v1.0.0), nouvelle couverture et galerie (formulaire, résultat duos, résultat trios, vue mobile).
-- Projet **LoL Random Arena — Mobile** (React Native) : passé de « planned » à « done », dépôt dédié `reactnative-lol-random-arena`, description, tags et galerie de captures.
+- Projet **LoL Random Arena** (React Native, version mobile) : passé de « planned » à « done », titre sans suffixe « — Mobile » (tronqué sur la carte ; la catégorie et les captures suffisent à la distinguer), dépôt dédié `reactnative-lol-random-arena`, description, tags et galerie de captures.
 
 ## 2026-09-06
 
