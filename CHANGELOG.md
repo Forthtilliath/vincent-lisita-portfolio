@@ -6,6 +6,12 @@ Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Le projet est déployé en continu : les entrées sont datées par session de travail
 plutôt que par numéro de version.
 
+## 2026-09-27
+
+### Modifié
+
+- Projet **Bon Sang** (Next.js, ex-« Don du sang ») : renommé d'après sa marque, v1.0.0 terminée. Description et tags mis à jour après la refonte « Plasma & Globule », galerie refaite (accueil, parcours d'une poche, témoignages, quiz, carte des collectes, suivi, vues mobiles).
+
 ## 2026-09-26
 
 ### Modifié
