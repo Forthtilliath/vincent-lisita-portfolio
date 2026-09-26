@@ -31,9 +31,11 @@
 </script>
 
 <!-- Focusable so the arrow keys can browse screenshots (carousel pattern). -->
+<!-- min-w-0: as a grid item of the dialog, the gallery would otherwise grow to the
+     thumbnails' full width instead of letting their row scroll horizontally. -->
 <!-- svelte-ignore a11y_no_noninteractive_tabindex, a11y_no_noninteractive_element_interactions -->
 <section
-	class="flex flex-col gap-2"
+	class="flex min-w-0 flex-col gap-2"
 	aria-roledescription="carousel"
 	aria-label={$t('projects.gallery', { name })}
 	tabindex={total > 1 ? 0 : undefined}
