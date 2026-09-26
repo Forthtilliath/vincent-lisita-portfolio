@@ -140,17 +140,7 @@ const projects: Project[] = [
 			fr: "Constructeur de formulaires en glisser-déposer à l'identité d'atelier typographique : champs configurables, validation miroir côté Angular et côté Java, aperçu en direct, page publique, registre des réponses et export JSON Schema. Se lance en une commande avec Docker.",
 			en: 'Drag-and-drop form builder with a letterpress-workshop identity: configurable fields, mirrored validation in Angular and Java, live preview, public page, response ledger and JSON Schema export. Runs with a single Docker command.'
 		},
-		images: [
-			projectImages.angularForme,
-			projectImages.angularFormeMarbre,
-			projectImages.angularFormeAtelier,
-			projectImages.angularFormeEpreuve,
-			projectImages.angularFormeJsonSchema,
-			projectImages.angularFormeValidation,
-			projectImages.angularFormeRecu,
-			projectImages.angularFormeRegistre,
-			projectImages.angularFormeMobile
-		],
+		images: [projectImages.angularForme, ...projectImages.gallery('forme')],
 		tags: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/forme',
 		status: 'done',
