@@ -30,6 +30,8 @@ export const config: import('sveltekit-i18n').Config<TradArguments> = {
 type Params = {
 	name?: string;
 	lang?: string;
+	index?: number;
+	total?: number;
 };
 
 export const { t, loading, locales, locale, loadTranslations } = new i18n<Parser.Params<Params>>(
