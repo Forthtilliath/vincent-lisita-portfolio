@@ -16,6 +16,8 @@ import solidjsSpotube from './solidjs-spotube.webp';
 import solidjsOriflamme from './solidjs-oriflamme.webp';
 import solidjsPlaygroundsOrganizer from './solidjs-playgrounds-organizer.webp';
 
+import angularForme from './angular-forme.webp';
+
 import meeplog from './meeplog.webp';
 import devwind from './devwind.webp';
 
@@ -40,6 +42,8 @@ export {
 	solidjsSpotube,
 	solidjsOriflamme,
 	solidjsPlaygroundsOrganizer,
+	//
+	angularForme,
 	//
 	meeplog,
 	devwind
