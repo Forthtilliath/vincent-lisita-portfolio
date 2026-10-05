@@ -11,6 +11,7 @@ plutôt que par numéro de version.
 ### Modifié
 
 - Projet **Bilan** (Angular / Java, ex-« Gestion de portefeuille ») : renommé d'après sa marque et passé de « planned » à « done ». Description et tags mis à jour (tests Testcontainers et Playwright, sécurité outillée), dépôt `bilan`, galerie de neuf captures (tableau de bord, investissements, fiche titre, opérations, saisie, budgets, comptes, thème sombre, vues mobiles).
+- Projet **Relais** (Angular / Java, ex-« Chat en temps réel ») : renommé d'après sa marque et passé de « planned » à « done ». Description et tags mis à jour (STOMP, PostgreSQL, Docker), dépôt `relais`, galerie de sept captures (conversation en direct, suggestions de mention, notification, aperçu d'un canal, création de canal, connexion, vues mobiles).
 
 ## 2026-09-27
 
