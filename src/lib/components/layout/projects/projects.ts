@@ -170,6 +170,18 @@ const projects: Project[] = [
 		category: 'angular-java'
 	},
 	{
+		name: { fr: 'Relais', en: 'Relais' },
+		description: {
+			fr: "Messagerie en temps réel à l'identité de standard téléphonique de nuit : canaux, présence en ligne multi-onglets, « … écrit », non-lus et mentions notifiées (bandeau, carillon, notification système), sur WebSocket STOMP authentifié par jeton. Envoi optimiste, reconnexion avec rattrapage des messages manqués, anti-flood, et trois bots de démo qui répondent aux mentions pour voir le temps réel même seul. Tests d'intégration avec de vrais clients STOMP. Se lance en une commande avec Docker.",
+			en: 'Real-time messaging with a night switchboard identity: channels, multi-tab online presence, typing indicators, unread counts and mention notifications (toast, chime, system notification), over token-authenticated STOMP WebSocket. Optimistic sending, reconnection that catches up on missed messages, flood protection, and three demo bots answering mentions so the real-time features show even when visiting alone. Integration tests with real STOMP clients. Runs with a single Docker command.'
+		},
+		images: projectImages.gallery('relais'),
+		tags: ['Angular', 'Java', 'Spring Boot', 'WebSocket', 'STOMP', 'PostgreSQL', 'Docker'],
+		repo: ENDPOINT_GITHUB + '/relais',
+		status: 'done',
+		category: 'angular-java'
+	},
+	{
 		name: { fr: 'BoardGameShop', en: 'BoardGameShop' },
 		description: {
 			fr: "Boutique en ligne de jeux de société développée en Angular et Java/Spring Boot : catalogue, panier, commandes et back-office d'administration.",
@@ -179,16 +191,6 @@ const projects: Project[] = [
 		tags: ['Angular', 'Java', 'Spring Boot', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/boardgameshop',
 		status: 'wip',
-		category: 'angular-java'
-	},
-	{
-		name: { fr: 'Chat en temps réel', en: 'Real-Time Chat' },
-		description: {
-			fr: 'Messagerie instantanée avec salons, présence en ligne et notifications, via WebSocket. Front Angular, back Java/Spring.',
-			en: 'Instant messaging with rooms, online presence and notifications over WebSocket. Angular front, Java/Spring back.'
-		},
-		tags: ['Angular', 'Java', 'Spring Boot', 'WebSocket'],
-		status: 'planned',
 		category: 'angular-java'
 	},
 
