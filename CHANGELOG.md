@@ -6,6 +6,12 @@ Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Le projet est déployé en continu : les entrées sont datées par session de travail
 plutôt que par numéro de version.
 
+## 2026-10-05
+
+### Modifié
+
+- Projet **Bilan** (Angular / Java, ex-« Gestion de portefeuille ») : renommé d'après sa marque et passé de « planned » à « done ». Description et tags mis à jour (tests Testcontainers et Playwright, sécurité outillée), dépôt `bilan`, galerie de neuf captures (tableau de bord, investissements, fiche titre, opérations, saisie, budgets, comptes, thème sombre, vues mobiles).
+
 ## 2026-09-27
 
 ### Modifié
