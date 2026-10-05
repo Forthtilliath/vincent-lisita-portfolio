@@ -150,6 +150,26 @@ const projects: Project[] = [
 		category: 'angular-java'
 	},
 	{
+		name: { fr: 'Bilan', en: 'Bilan' },
+		description: {
+			fr: "Gestionnaire de portefeuille et de finances personnelles : comptes, opérations et virements, budgets par catégorie, investissements (PRU, plus-values latentes et réalisées, répartition, performance) et tableaux de bord à graphiques SVG faits main. Deux ans de données fictives régénérées à la date du jour, thème clair/sombre. Qualité outillée de bout en bout : tests d'API sur PostgreSQL (Testcontainers), Vitest, Playwright et audit d'accessibilité axe, CSP stricte, scans Trivy, Gitleaks et CodeQL en CI. Se lance en une commande avec Docker.",
+			en: 'Personal finance and portfolio manager: accounts, transactions and transfers, category budgets, investments (average cost, unrealized and realized gains, allocation, performance) and dashboards with hand-made SVG charts. Two years of fictional data regenerated relative to today, light/dark theme. End-to-end quality tooling: API tests on PostgreSQL (Testcontainers), Vitest, Playwright with axe accessibility audits, strict CSP, Trivy, Gitleaks and CodeQL scans in CI. Runs with a single Docker command.'
+		},
+		images: projectImages.gallery('bilan'),
+		tags: [
+			'Angular',
+			'Java',
+			'Spring Boot',
+			'PostgreSQL',
+			'Docker',
+			'Testcontainers',
+			'Playwright'
+		],
+		repo: ENDPOINT_GITHUB + '/bilan',
+		status: 'done',
+		category: 'angular-java'
+	},
+	{
 		name: { fr: 'BoardGameShop', en: 'BoardGameShop' },
 		description: {
 			fr: "Boutique en ligne de jeux de société développée en Angular et Java/Spring Boot : catalogue, panier, commandes et back-office d'administration.",
@@ -159,16 +179,6 @@ const projects: Project[] = [
 		tags: ['Angular', 'Java', 'Spring Boot', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/boardgameshop',
 		status: 'wip',
-		category: 'angular-java'
-	},
-	{
-		name: { fr: 'Gestion de portefeuille', en: 'Portfolio Manager' },
-		description: {
-			fr: 'Application de suivi de portefeuille et de finances personnelles : comptes, transactions, catégories, tableaux de bord et graphiques.',
-			en: 'Personal finance and portfolio tracker: accounts, transactions, categories, dashboards and charts.'
-		},
-		tags: ['Angular', 'Java', 'Spring Boot'],
-		status: 'planned',
 		category: 'angular-java'
 	},
 	{
