@@ -1,81 +1,66 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import type { Face } from './dice-faces';
 
 	interface Props {
-		face: 'front' | 'top' | 'back' | 'bottom' | 'left' | 'right';
-		className?: string;
-		bgColor?: string;
-		translateY: string;
-		children?: import('svelte').Snippet;
+		face: Face;
+		letter: string;
+		color: string;
 	}
 
-	let { face, className = '', bgColor = '', translateY, children }: Props = $props();
+	let { face, letter, color }: Props = $props();
 </script>
 
-<div class={cn(`face ${face}`, className)} style="--translateY: {translateY}; --bgColor: {bgColor}">
-	<p>{@render children?.()}</p>
+<div class="face {face}" style:--bg-color={color}>
+	<span>{letter}</span>
 </div>
 
 <style lang="scss">
 	.face {
 		position: absolute;
-		backface-visibility: hidden;
-		width: 100%;
-		height: 100%;
-		line-height: var(--size);
-		// opacity: 0.9;
+		inset: 0;
+		display: grid;
+		place-items: center;
+		border: 2px solid #fff;
 		border-radius: 0.25rem;
+		background-color: var(--bg-color);
+		backface-visibility: hidden;
 
 		&.front {
-			background-color: var(--bgColor, #2962ff);
 			transform: translateZ(calc(var(--size) / 2));
 		}
 
-		&.back {
-			background-color: var(--bgColor, #00796b);
-			transform: translateZ(calc(var(--size) / -2)) rotateY(180deg) rotateZ(180deg);
-		}
-
-		&.left {
-			background-color: #c62828;
-			transform: translateX(calc(var(--size) / 2)) rotateY(90deg);
-		}
-
-		&.right {
-			background-color: #00e676;
-			transform: translateX(calc(var(--size) / -2)) rotateY(-90deg);
-		}
-
 		&.top {
-			background-color: var(--bgColor, #f57c00);
 			transform: translateY(calc(var(--size) / 2)) rotateX(-90deg);
 		}
 
-		&.bottom {
-			background-color: var(--bgColor, #283593);
-			transform: translateY(calc(var(--size) / -2)) rotateX(90deg);
+		&.back {
+			transform: translateZ(calc(var(--size) / -2)) rotateY(180deg) rotateZ(180deg);
 		}
 
-		p {
-			text-transform: uppercase;
-			font-size: 100px;
-			font-size: calc(var(--size) * 0.8);
-			color: #fff;
-			text-align: center;
-			transform: translateY(var(--translateY));
-			font-family:
-				'Overpass',
-				-apple-system,
-				BlinkMacSystemFont,
-				'Segoe UI',
-				Roboto,
-				Oxygen,
-				Ubuntu,
-				Cantarell,
-				'Fira Sans',
-				'Droid Sans',
-				'Helvetica Neue',
-				sans-serif;
+		&.bottom {
+			transform: translateY(calc(var(--size) / -2)) rotateX(90deg);
 		}
+	}
+
+	span {
+		font-size: calc(var(--size) * 0.7);
+		line-height: 1;
+		text-transform: uppercase;
+		color: #fff;
+		// Capitals sit low in the line box
+		transform: translateY(-0.05em);
+		font-family:
+			'Overpass',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			Oxygen,
+			Ubuntu,
+			Cantarell,
+			'Fira Sans',
+			'Droid Sans',
+			'Helvetica Neue',
+			sans-serif;
 	}
 </style>

@@ -1,58 +1,77 @@
 <script lang="ts">
-	import { transposeWords } from './transposeWords';
+	import { onMount } from 'svelte';
 	import FlipDice from './flip-dice.svelte';
-	import type { Flip } from 'forth-flip-words';
+	import { transposeWords } from './transposeWords';
+	import type { FlipWord } from './dice-faces';
 	import { cn } from '$lib/utils';
 
 	interface Props {
-		words: [string, string, string, string];
-		size: string;
-		options?: Flip.Options;
+		words: FlipWord[];
+		/** Time between two words, in ms. */
+		interval?: number;
+		/** Delay between two neighbouring dice, in ms. */
+		stagger?: number;
+		/** Largest die size, in px. */
+		maxSize?: number;
+		className?: string;
 	}
 
-	let {
-		words,
-		size,
-		options = {
-			delay: '0s',
-			classNames: {
-				wrapper: '',
-				face: ''
-			}
-		}
-	}: Props = $props();
+	let { words, interval = 2800, stagger = 90, maxSize = 100, className = '' }: Props = $props();
 
-	let transposedWords = $derived(transposeWords(words));
-	let className = $derived(options?.classNames?.wrapper);
+	let letters = $derived(transposeWords(words.map((word) => word.label)));
+	let step = $state(0);
+
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		const id = setInterval(() => {
+			if (!document.hidden) step++;
+		}, interval);
+		return () => clearInterval(id);
+	});
 </script>
 
 <!--
 @component
-This component is a wrapper around the `FlipDice` component.
-You can display 4 words with a letter per dice.
+Spells each word with one letter per die, then flips the dice to the next word.
+Any number of words is supported; shorter ones are centered between blank dice.
+Dice shrink with the container width, up to `maxSize`.
 
-```tsx
+```svelte
 <FlipWords
-	words={['react', 'nextjs', 'solidjs', 'svelte']}
-	size="100px"
-	options={{
-		translateY: '-4px',
-		delayFn: (i) => `${(i * 0.2).toFixed(1)}s`,
-		colors: ['#149eca', '#000000', '#3a5577', '#f96743'],
-		duration: '12s'
-	}}
+	words={[
+		{ label: 'react', color: '#149eca' },
+		{ label: 'svelte', color: '#ff3e00' }
+	]}
 />
 ```
 -->
-<div class={cn('flip-wrapper', className)}>
-	{#each transposedWords as letters, nth (nth)}
-		<FlipDice {letters} {size} {nth} {...options} />
-	{/each}
+<div
+	class={cn('flip-words', className)}
+	style:--count={letters.length}
+	style:--max-size="{maxSize}px"
+>
+	<span class="sr-only">{words.map((word) => word.label).join(', ')}</span>
+	<div class="row" aria-hidden="true">
+		{#each letters as dieLetters, nth (nth)}
+			<FlipDice letters={dieLetters} {words} {step} delay={nth * stagger} />
+		{/each}
+	</div>
 </div>
 
 <style lang="scss">
-	.flip-wrapper {
+	.flip-words {
+		container-type: inline-size;
+		width: 100%;
+	}
+
+	.row {
+		// count × size + (count − 1) × gap fills the width, with gap = size / 8
+		--size: min(var(--max-size), 100cqi / (var(--count) + (var(--count) - 1) / 8));
 		display: flex;
-		gap: 10px;
+		justify-content: center;
+		gap: calc(var(--size) / 8);
+		// Room for the corners while a die turns
+		padding-block: calc(var(--size) / 4);
 	}
 </style>
