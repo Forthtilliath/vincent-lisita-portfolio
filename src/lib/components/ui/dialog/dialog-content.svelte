@@ -39,7 +39,7 @@
 				{#snippet child({ props })}
 					<Button
 						variant="ghost"
-						class="absolute top-2 right-2 z-10 rounded-full bg-black/70 text-white ring-1 ring-white/20 backdrop-blur-sm hover:bg-black/85 hover:text-white dark:hover:bg-black/85"
+						class="absolute top-2 right-2 z-10 cursor-pointer rounded-full bg-black/70 text-white ring-1 ring-white/20 backdrop-blur-sm hover:bg-black/85 hover:text-white dark:hover:bg-black/85"
 						size="icon-sm"
 						{...props}
 					>
