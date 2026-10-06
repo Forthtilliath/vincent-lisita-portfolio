@@ -39,9 +39,10 @@
 	let hiddenTagsCount = $derived(Math.max(0, tags.length - MAX_VISIBLE_TAGS));
 
 	const statusClass: Record<Project['status'], string> = {
-		done: 'bg-emerald-500/15 text-emerald-300 ring-emerald-500/30',
-		wip: 'bg-amber-500/15 text-amber-300 ring-amber-500/30',
-		planned: 'bg-slate-500/20 text-slate-300 ring-slate-500/40'
+		// Near-opaque dark backgrounds keep the badge readable over any screenshot.
+		done: 'bg-emerald-950/90 text-emerald-300 ring-emerald-500/40',
+		wip: 'bg-amber-950/90 text-amber-300 ring-amber-500/40',
+		planned: 'bg-slate-900/90 text-slate-300 ring-slate-500/40'
 	};
 </script>
 
