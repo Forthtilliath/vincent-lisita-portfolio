@@ -238,6 +238,7 @@ const projects: Project[] = [
 			fr: 'Boîte à outils React Native — composants, hooks et helpers — utilisée en production par Glucodose. Publiée sur npm depuis un monorepo Turborepo (versioning Changesets, publication en CI).',
 			en: 'React Native toolkit — components, hooks and helpers — used in production by Glucodose. Published to npm from a Turborepo monorepo (Changesets versioning, CI publishing).'
 		},
+		images: projectImages.gallery('react-native-kit'),
 		tags: ['React Native', 'Expo', 'Typescript', 'Turborepo'],
 		url: 'https://www.npmjs.com/package/@forthtilliath/react-native-kit',
 		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
