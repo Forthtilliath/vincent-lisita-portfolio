@@ -10,11 +10,21 @@ describe('transposeWords', () => {
 		]);
 	});
 
-	it('pads shorter words with spaces to match the longest word', () => {
+	it('centers shorter words with spaces to match the longest word', () => {
 		expect(transposeWords(['a', 'bcd'])).toEqual([
-			['a', 'b'],
-			[' ', 'c'],
+			[' ', 'b'],
+			['a', 'c'],
 			[' ', 'd']
+		]);
+	});
+
+	it('puts the odd padding space on the right', () => {
+		expect(transposeWords(['ab', 'cdefg']).map((letters) => letters[0])).toEqual([
+			' ',
+			'a',
+			'b',
+			' ',
+			' '
 		]);
 	});
 
