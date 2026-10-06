@@ -3,11 +3,20 @@
 	import SectionTitle from '$lib/components/shared/section-title.svelte';
 	import Text3d from '$lib/components/shared/text-3d.svelte';
 	import FlipWords from '$lib/components/shared/flip-words/flip-words.svelte';
+	import type { FlipWord } from '$lib/components/shared/flip-words/dice-faces';
 	import { t } from '$lib/translations';
+
+	// Ordered so that close colours never follow each other, wrap-around included
+	const stacks: FlipWord[] = [
+		{ label: 'react', color: '#149eca' },
+		{ label: 'svelte', color: '#ff3e00' },
+		{ label: 'java', color: '#5382a1' },
+		{ label: 'angular', color: '#dd0031' },
+		{ label: 'next.js', color: '#000000' }
+	];
 
 	let clientWidth: number = $state(0);
 
-	let diceWidth: number = $derived(Math.min(100, (clientWidth - 100) / 7));
 	let depthMax: number = $derived(getDepth(clientWidth));
 
 	function getDepth(width: number): number {
@@ -39,26 +48,7 @@
 		{$t('hero.job')}
 	</Text3d>
 
-	<div
-		class="relative mt-8 w-full"
-		style:height={diceWidth > 0 ? `${diceWidth}px` : undefined}
-		bind:clientWidth
-	>
-		{#if diceWidth > 0}
-			<FlipWords
-				words={['react', 'next.js', 'solidjs', 'svelte']}
-				size={diceWidth + 'px'}
-				options={{
-					translateY: '-4px',
-					delayFn: (i) => `${(i * 0.2).toFixed(1)}s`,
-					colors: ['#149eca', '#000000', '#3a5577', '#f96743'],
-					duration: '12s',
-					classNames: {
-						face: 'border-2 border-white',
-						wrapper: 'absolute left-1/2 -translate-x-1/2'
-					}
-				}}
-			/>
-		{/if}
+	<div class="mt-6 w-full" bind:clientWidth>
+		<FlipWords words={stacks} />
 	</div>
 </Section>
