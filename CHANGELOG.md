@@ -6,6 +6,13 @@ Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Le projet est déployé en continu : les entrées sont datées par session de travail
 plutôt que par numéro de version.
 
+## 2026-10-07
+
+### Modifié
+
+- Hero : titre « Développeur Full-Stack » (EN « Full-Stack Developer ») au lieu de « Développeur Front-End ».
+- Dés `FlipWords` du hero : nombre de mots illimité, mots courts centrés, taille fluide (container queries) et arrêt si `prefers-reduced-motion`. Ils affichent React, Svelte, Java, Angular et Next.js, ordonnés pour alterner les couleurs.
+
 ## 2026-10-05
 
 ### Modifié
