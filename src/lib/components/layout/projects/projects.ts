@@ -293,7 +293,7 @@ const projects: Project[] = [
 		tags: ['React', 'Typescript', 'Tailwind', 'Shadcn/ui', 'Storybook'],
 		url: 'https://www.npmjs.com/package/@forthtilliath/forth-ui',
 		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
-		status: 'wip',
+		status: 'maintained',
 		category: 'libs'
 	},
 	{
