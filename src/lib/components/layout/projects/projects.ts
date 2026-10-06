@@ -191,7 +191,7 @@ const projects: Project[] = [
 		images: projectImages.gallery('boardgameshop'),
 		tags: ['Angular', 'Java', 'Spring Boot', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/boardgameshop',
-		status: 'wip',
+		status: 'done',
 		category: 'angular-java'
 	},
 
