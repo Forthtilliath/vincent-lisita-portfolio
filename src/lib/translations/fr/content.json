@@ -52,6 +52,7 @@
 		"close": "Fermer",
 		"status": {
 			"done": "Terminé",
+			"maintained": "Maintenu",
 			"wip": "En cours",
 			"planned": "À faire"
 		}
