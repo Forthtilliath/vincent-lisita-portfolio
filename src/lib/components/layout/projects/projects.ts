@@ -185,11 +185,11 @@ const projects: Project[] = [
 	{
 		name: { fr: 'BoardGameShop', en: 'BoardGameShop' },
 		description: {
-			fr: "Boutique en ligne de jeux de société développée en Angular et Java/Spring Boot : catalogue, panier, commandes et back-office d'administration.",
-			en: 'Online board-game shop built with Angular and Java/Spring Boot: catalogue, cart, orders and an admin back-office.'
+			fr: "Boutique en ligne de jeux de société à l'identité ludique (pions, dés et couleur propre à chaque jeu) : plus de 100 jeux avec recherche, filtres et tri partageables par l'URL, fiches avec avis d'acheteurs vérifiés, favoris partageables, alertes de retour en stock, panier et paiement par carte via Stripe (mode test, webhooks), codes promo et factures PDF. Back-office complet : catalogue, commandes, utilisateurs, codes promo et tableau de bord des ventes. Authentification JWT en cookies HttpOnly avec renouvellement et protection CSRF, limitation des tentatives de connexion, rendu serveur (SSR) Angular, migrations Flyway et CI sur chaque PR.",
+			en: 'Online board-game shop with a playful identity (pawns, dice and a color of its own for each game): over 100 games with search, filters and sorting shareable through the URL, game pages with verified-buyer reviews, shareable wishlists, back-in-stock alerts, cart and card payment through Stripe (test mode, webhooks), promo codes and PDF invoices. Full back-office: catalogue, orders, users, promo codes and a sales dashboard. JWT authentication in HttpOnly cookies with refresh and CSRF protection, login rate limiting, Angular server-side rendering (SSR), Flyway migrations and CI on every PR.'
 		},
 		images: projectImages.gallery('boardgameshop'),
-		tags: ['Angular', 'Java', 'Spring Boot', 'Typescript'],
+		tags: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'Stripe', 'Typescript'],
 		repo: ENDPOINT_GITHUB + '/boardgameshop',
 		status: 'done',
 		category: 'angular-java'
