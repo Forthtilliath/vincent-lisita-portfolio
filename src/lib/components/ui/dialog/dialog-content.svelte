@@ -38,8 +38,8 @@
 			<DialogPrimitive.Close data-slot="dialog-close">
 				{#snippet child({ props })}
 					<Button
-						variant="outline"
-						class="bg-background/80 hover:bg-accent absolute top-2 right-2 rounded-full"
+						variant="ghost"
+						class="absolute top-2 right-2 z-10 rounded-full bg-black/70 text-white ring-1 ring-white/20 backdrop-blur-sm hover:bg-black/85 hover:text-white dark:hover:bg-black/85"
 						size="icon-sm"
 						{...props}
 					>
