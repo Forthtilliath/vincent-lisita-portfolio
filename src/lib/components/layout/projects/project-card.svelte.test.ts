@@ -139,6 +139,13 @@ describe('project-card', () => {
 		expect(screen.getByText('En cours')).toBeInTheDocument();
 	});
 
+	it('labels an ongoing library as maintained rather than in progress', () => {
+		renderCard({ status: 'maintained' });
+
+		expect(screen.getByText('Maintenu')).toBeInTheDocument();
+		expect(screen.queryByText('En cours')).not.toBeInTheDocument();
+	});
+
 	it('does not render a repo button when the project has no repo', () => {
 		renderCard({ repo: undefined });
 

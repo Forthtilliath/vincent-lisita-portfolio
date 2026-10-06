@@ -41,6 +41,7 @@
 	const statusClass: Record<Project['status'], string> = {
 		// Near-opaque dark backgrounds keep the badge readable over any screenshot.
 		done: 'bg-emerald-950/90 text-emerald-300 ring-emerald-500/40',
+		maintained: 'bg-sky-950/90 text-sky-300 ring-sky-500/40',
 		wip: 'bg-amber-950/90 text-amber-300 ring-amber-500/40',
 		planned: 'bg-slate-900/90 text-slate-300 ring-slate-500/40'
 	};
@@ -59,6 +60,13 @@
 				status
 			]}"
 		>
+			{#if status === 'maintained'}
+				<!-- Pulsing "live" dot: the project keeps evolving, it isn't stuck in progress. -->
+				<span
+					class="mr-1.5 size-1.5 rounded-full bg-sky-400 motion-safe:animate-pulse"
+					aria-hidden="true"
+				></span>
+			{/if}
 			{$t(`projects.status.${status}`)}
 		</span>
 		<Card

@@ -53,6 +53,7 @@
 		"close": "Close",
 		"status": {
 			"done": "Done",
+			"maintained": "Maintained",
 			"wip": "In progress",
 			"planned": "Planned"
 		}

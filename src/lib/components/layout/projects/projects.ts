@@ -1,7 +1,8 @@
 import * as projectImages from '$lib/assets/projects';
 import { type Language } from '$lib/translations';
 
-export type ProjectStatus = 'done' | 'wip' | 'planned';
+/** `maintained`: shipped and alive, with no planned end (e.g. a published library). */
+export type ProjectStatus = 'done' | 'maintained' | 'wip' | 'planned';
 export type ProjectCategory = 'react' | 'svelte-solid' | 'angular-java' | 'react-native' | 'libs';
 
 export type Project = {
@@ -240,7 +241,7 @@ const projects: Project[] = [
 		tags: ['React Native', 'Expo', 'Typescript', 'Turborepo'],
 		url: 'https://www.npmjs.com/package/@forthtilliath/react-native-kit',
 		repo: ENDPOINT_GITHUB + '/forthtilliath-packages',
-		status: 'wip',
+		status: 'maintained',
 		category: 'react-native'
 	},
 	{
