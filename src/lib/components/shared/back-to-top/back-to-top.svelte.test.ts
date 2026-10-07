@@ -52,6 +52,15 @@ describe('shared/back-to-top', () => {
 		expect(await screen.findByRole('button', { name: /retour en haut/i })).toBeInTheDocument();
 	});
 
+	it('explains what the rocket does in a tooltip', async () => {
+		render(BackToTop, { props: { showAfter: 300 } });
+
+		setScrollY(400);
+		const button = await screen.findByRole('button', { name: /retour en haut/i });
+
+		expect(button).toHaveTextContent(/retour en haut de la page/i);
+	});
+
 	it('flies the page back to the top when clicked', async () => {
 		const user = userEvent.setup();
 		render(BackToTop, { props: { showAfter: 300 } });

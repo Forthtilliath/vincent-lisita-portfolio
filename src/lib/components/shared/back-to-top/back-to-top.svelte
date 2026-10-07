@@ -81,6 +81,15 @@
 			launching && 'is-launching'
 		]}
 	>
+		<span
+			class={[
+				'tooltip pointer-events-none absolute top-1/2 right-full mr-3 -translate-y-1/2 rounded-md px-2.5 py-1',
+				'border-app-blue/40 bg-app-black/90 border text-xs whitespace-nowrap text-white shadow-lg'
+			]}
+			aria-hidden="true"
+		>
+			{$t('ui.backToTop')}
+		</span>
 		<span class="flame" aria-hidden="true"></span>
 		<span class="icon">
 			<RocketIcon class="size-5" />
@@ -102,6 +111,20 @@
 
 	.rocket:hover .icon {
 		animation-play-state: paused;
+	}
+
+	.tooltip {
+		opacity: 0;
+		transition: opacity 150ms ease-out;
+	}
+
+	.rocket:hover .tooltip,
+	.rocket:focus-visible .tooltip {
+		opacity: 1;
+	}
+
+	.is-launching .tooltip {
+		display: none;
 	}
 
 	.flame {
