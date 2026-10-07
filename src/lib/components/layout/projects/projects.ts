@@ -262,13 +262,22 @@ const projects: Project[] = [
 	{
 		name: { fr: 'DevWind', en: 'DevWind' },
 		description: {
-			fr: "Extension Chrome pour éditer visuellement les classes Tailwind CSS en direct sur n'importe quel site : picker visuel, panneau de classes par catégorie, synthèse CSS live, contrôle de contraste WCAG. Deux variantes : Tailwind v4 (DevWind) et v3 (devwind-tw3).",
-			en: 'Chrome extension to visually edit Tailwind CSS classes live on any site: visual picker, categorized class panel, live CSS synthesis, WCAG contrast checking. Two variants: Tailwind v4 (DevWind) and v3 (devwind-tw3).'
+			fr: "Extension Chrome pour éditer visuellement les classes Tailwind CSS en direct sur n'importe quel site : picker façon DevTools (dimensions, marges, padding), panneau de classes par catégorie avec aperçu au survol, synthèse CSS live même pour les classes absentes du build, breakpoints réels du site, annuler/rétablir et historique exportable, recherche par valeur CSS tolérante aux fautes, contrôle de contraste WCAG, interface FR/EN. Deux versions publiées : Tailwind v4 (DevWind) et Tailwind v3 (devwind-tw3, fidèle au moteur v3). Content script de 17 Ko, tests Vitest et Playwright.",
+			en: "Chrome extension to visually edit Tailwind CSS classes live on any site: DevTools-like picker (size, margin, padding), categorized class panel with hover preview, live CSS synthesis even for classes missing from the build, the site's real breakpoints, undo/redo and an exportable history, typo-tolerant search by CSS value, WCAG contrast checking, FR/EN interface. Two released versions: Tailwind v4 (DevWind) and Tailwind v3 (devwind-tw3, true to the v3 engine). 17 KB content script, Vitest and Playwright tests."
 		},
 		images: [projectImages.devwind, ...projectImages.gallery('devwind')],
-		tags: ['React', 'Tailwind', 'Typescript', 'Zustand', 'Vite', 'Chrome Extension'],
+		tags: [
+			'React',
+			'Tailwind',
+			'Typescript',
+			'Zustand',
+			'Vite',
+			'Chrome Extension',
+			'Vitest',
+			'Playwright'
+		],
 		repo: ENDPOINT_GITHUB + '/devwind',
-		status: 'wip',
+		status: 'done',
 		category: 'libs'
 	},
 	{
