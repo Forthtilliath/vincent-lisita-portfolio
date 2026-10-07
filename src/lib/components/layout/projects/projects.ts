@@ -306,13 +306,15 @@ const projects: Project[] = [
 		category: 'libs'
 	},
 	{
-		name: { fr: 'Bot soirées jeux', en: 'Board Game Night Bot' },
+		name: { fr: 'Meeple Night', en: 'Meeple Night' },
 		description: {
-			fr: 'Bot Discord pour groupes de joueurs : organisation des soirées (dates, présences, rappels), vote du jeu à sortir, collection du groupe importée depuis MyLudo, suivi des parties et classement Elo.',
-			en: 'Discord bot for board game groups: game-night organization (dates, RSVP, reminders), voting on which game to play, group collection imported from MyLudo, play tracking and Elo ranking.'
+			fr: "Bot Discord bilingue (FR/EN) pour groupes de joueurs : soirées jeux avec inscriptions, liste d'attente, récurrence, export agenda (.ics) et rappels automatiques, vote du jeu à sortir, collection du groupe importée depuis MyLudo, suivi des parties et classement Elo multijoueur recalculé depuis l'historique. Logique métier pure testée à part, interactions sans état qui survivent aux redémarrages, sauvegardes SQLite quotidiennes. Hébergé en continu sur un panel Pterodactyl gratuit, image Docker en alternative.",
+			en: 'Bilingual (EN/FR) Discord bot for board game groups: game nights with RSVP, waitlist, recurrence, calendar export (.ics) and automatic reminders, voting on which game to play, group collection imported from MyLudo, play tracking and a multiplayer Elo ranking replayed from the play history. Pure business logic tested on its own, stateless interactions that survive restarts, daily SQLite backups. Hosted around the clock on a free Pterodactyl panel, with a Docker image as an alternative.'
 		},
-		tags: ['Discord.js', 'Node.js', 'Typescript', 'Drizzle', 'SQLite'],
-		status: 'planned',
+		images: projectImages.gallery('meeple-night'),
+		tags: ['Discord.js', 'Node.js', 'Typescript', 'Drizzle', 'SQLite', 'Vitest', 'Docker'],
+		repo: ENDPOINT_GITHUB + '/meeple-night',
+		status: 'done',
 		category: 'libs'
 	}
 ];
