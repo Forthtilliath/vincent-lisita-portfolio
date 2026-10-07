@@ -12,6 +12,7 @@ plutôt que par numéro de version.
 
 - Hero : titre « Développeur Full-Stack » (EN « Full-Stack Developer ») au lieu de « Développeur Front-End ».
 - Dés `FlipWords` du hero : nombre de mots illimité, mots courts centrés, taille fluide (container queries) et arrêt si `prefers-reduced-motion`. Ils affichent React, Svelte, Java, Angular et Next.js, ordonnés pour alterner les couleurs.
+- Projet **DevWind** (Libs & extensions) : passé de « wip » à « done » après la v0.2 des deux versions (Tailwind v4 et v3). Description mise à jour (picker façon DevTools, aperçu au survol, annuler/rétablir, recherche par valeur CSS, breakpoints du site, interface FR/EN), tags Vitest et Playwright ajoutés, couverture et galerie refaites (picker, panneaux, aperçu au survol, historique et recherche par valeur).
 
 ## 2026-10-05
 
